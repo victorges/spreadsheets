@@ -1,0 +1,8 @@
+#!/bin/bash
+mkdir bin
+javac -d bin -sourcepath src -cp lib/json-20080701.jar src/com/v1ct04/spreadsheets/SpreadsheetApplication.java
+cd bin
+jar xf ../lib/json-20080701.jar
+jar cfe ../spreadsheets.jar com.v1ct04.spreadsheets.SpreadsheetApplication .
+cd ..
+rm -rf bin

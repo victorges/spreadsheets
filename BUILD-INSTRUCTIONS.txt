@@ -1,0 +1,14 @@
+=== Spreadsheets ===
+
+BUILD INSTRUCTIONS:
+
+Directories:
+ src/ - Source file for main classes of the application
+ lib/ Folder for external libraries imported to the project. The hamcrest library is a dependency from JMock, so we haven’t even considered that as another imported library.
+ tests/ - Test classes source files. Contains test cases for the “logic-ful” classes of the main app, developed in JUnit, and an AllTests test suite for running all the tests from the command line easily.
+
+To BUILD:
+ - Simply run the ./build bash script. It will build the source classes and bundle them with the dependencies on a single executable JAR (“spreadsheets.jar”). This executable JAR has been already included on the package so that it can be run directly if having issues with the build script.
+
+To TEST:
+ - Run the ./test bash script. It will compile the test classes and run the test suite containing all test cases, using JMock.
