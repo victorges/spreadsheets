@@ -1,12 +1,13 @@
 Spreadsheets
-
 ============
 
 This application has been developed by Victor Gonçalves Elias during a remote interview with Palantir Technologies, while pursuing an internship position at the company.
 
-This is basically a spreadsheet application with basic funcionalities like mathematical expressions with +, -, * and / operations and parentheses, and referencing other cells to make more complex expressiions.
+It is basically a spreadsheet application with basic funcionalities like mathematical expressions with +, -, * and / operations and parentheses, and referencing other cells to make more complex expressiions.
 
 ============
+
+Things worth noting about the development and application current state:
 
  - It has been developed in Java 7, with the default Swing GUI toolkit. It's been developed and tested on an OS X 10.9 computer, so there may be some differences when running it on a Windows system (probably just the general look and feel).
 
@@ -14,7 +15,7 @@ This is basically a spreadsheet application with basic funcionalities like mathe
 
  - Also like Excel, to make a cell be parsed as an arithmetic expression all you need to do is make it start with an equal sign ('=') so "=1+1" would be evaluated to "2.0", for example.
 
- - As required, the expressions can contain regular operators (+, -, *, /) and the operands may be a literal floating point or references to other cells (following the Excel nomenclature). We also allow the expressions to contain parentheses so for example "=(1+2)*3/2" would be valid and correctly parsed.
+ - As required, the expressions can contain regular operators (+, -, * and / ) and the operands may be a literal floating point or references to other cells (following the Excel nomenclature). We also allow the expressions to contain parentheses so for example "=(1+2)*3/2" would be valid and correctly parsed.
 
  - There is error detection of anything that could go bad, from a malformed expression to unbalanced parentheses and cycle dependency between cells. If an error occurs while trying to parse a cell, an error string would be displayed on the cell with a tip of what has gone wrong (e.g.: "#!CYCLE" for cyclic dependency between cells, "#!UNBLN" for unbalanced parentheses). There is a more detailed message that is sent with the Exception itself, but for now we just display the small tip on the cell since it's enough to know what has gone wrong.
 
